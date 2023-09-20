@@ -1,0 +1,201 @@
+.text {
+  &__header {
+    &--title {
+      font-weight: 600;
+      font-size: 2.2rem;
+    }
+
+    &--title-medium {
+      font-weight: 600;
+      font-size: 2.2rem;
+    }
+
+    &--title-sub {
+      font-weight: 300;
+      font-size: 2.2rem;
+      margin: 1.2rem 0;
+    }
+
+    &--subtitle {
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 2rem;
+      }
+
+      font-size: 1.8rem;
+      font-weight: 300;
+      text-align: right;
+      cursor: pointer;
+      position: relative;
+
+      &--mobile {
+        font-size: 2rem !important;
+      }
+    }
+
+    &--subtitle::after {
+      content: "";
+      position: absolute;
+      // background-color: var(--font-color-secondary);
+      background-color: var(--color-red);
+      height: 0.1px;
+      width: 0;
+      left: 0;
+      bottom: -5px;
+      transition: 0.2s ease-in;
+    }
+
+    &--subtitle:hover::after {
+      width: 100%;
+    }
+
+    &--link {
+      text-decoration: none;
+    }
+
+    &--link:hover {
+      transition: 0.2s ease-in-out;
+      color: var(--font-color-secondary);
+    }
+  }
+
+  &__landing-page {
+    &--title {
+      font-weight: 500;
+      font-size: 2.2rem;
+    }
+
+    &--subtitle {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+
+    &--headline {
+      font-weight: 600;
+      font-size: 3rem;
+      line-height: 1.5;
+
+      @media only screen and (max-width: $bp-mobile) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &--button {
+      background-color: var(--color-ternary);
+      text-decoration: none;
+      border-color: transparent;
+      cursor: pointer;
+      border-radius: 18px;
+      padding: 2.4rem 3.2rem;
+      font-size: 2rem;
+      font-weight: 600;
+
+      position: relative;
+      display: inline-block;
+      transition: 0.2s ease-out;
+
+      @media only screen and (max-width: $bp-mobile) {
+        padding: 1.8rem 2.4rem;
+        border-radius: 12px;
+      }
+    }
+
+    &--button:hover {
+      background-color: var(--color-primary);
+      // color: var(--color-ternary);
+      transition: 0.2s ease-in;
+      transform: scale(1.05) perspective(1px);
+    }
+
+    &--button:active {
+      transform: translateY(2px);
+      transition: 0.2s ease-in;
+      -webkit-transform: translate(0px, 1px);
+    }
+  }
+
+  &__about-me {
+    &--title {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+
+    &--content {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__projects {
+    &--title {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    &--content {
+      font-weight: 400;
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
+
+    &--button {
+      background-color: var(--color-ternary);
+      text-decoration: none;
+      border-color: transparent;
+      cursor: pointer;
+      border-radius: 6px;
+      padding: 1.2rem 1.8rem;
+      font-size: 2rem;
+      font-weight: 600;
+
+      position: relative;
+      display: inline-block;
+      transition: 0.2s ease-out;
+    }
+
+    &--button:hover {
+      // background-color: var(--color-primary);
+      // color: var(--color-ternary);
+      transition: 0.2s ease-in;
+      transform: scale(1.05) perspective(1px);
+    }
+
+    &--button:active {
+      transform: translateY(2px);
+      transition: 0.2s ease-in;
+      -webkit-transform: translate(0px, 1px);
+    }
+  }
+
+  &__contact {
+    &--email {
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: right;
+      cursor: pointer;
+      position: relative;
+      text-decoration: none;
+    }
+
+    &--email::after {
+      content: "";
+      position: absolute;
+      // background-color: var(--font-color-secondary);
+      background-color: var(--color-red);
+      height: 0.1px;
+      width: 0;
+      left: 0;
+      bottom: -5px;
+      transition: 0.2s ease-in;
+    }
+
+    &--email:hover {
+      transition: 0.2s ease-in-out;
+      color: var(--font-color-secondary);
+    }
+
+    &--email:hover::after {
+      width: 100%;
+    }
+  }
+}

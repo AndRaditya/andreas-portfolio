@@ -1,28 +1,44 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-container">
+    <navigation-bar></navigation-bar>
+    <div class="app">
+      <landing-page-vue></landing-page-vue>
+      <logo-page-vue></logo-page-vue>
+      <about-me-vue></about-me-vue>
+      <projects-vue></projects-vue>
+      <contact-me-vue></contact-me-vue>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AboutMeVue from "./components/AboutMe.vue";
+import ContactMeVue from "./components/ContactMe.vue";
+import LandingPageVue from "./components/LandingPage.vue";
+import LogoPageVue from "./components/LogoPage.vue";
+import NavigationBar from "./components/NavigationBar.vue";
+import ProjectsVue from "./components/Projects.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    NavigationBar,
+    AboutMeVue,
+    ContactMeVue,
+    LandingPageVue,
+    LogoPageVue,
+    ProjectsVue,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
+@import "../css/style.comp.css";
+@import "../css/main.css";
 </style>
